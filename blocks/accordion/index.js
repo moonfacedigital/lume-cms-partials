@@ -1,9 +1,9 @@
 export default {
-    name: "text",
-    label: "Text",
+    name: "accordion",
+    label: "Accordion",
     type: "object",
-    category: ["Content"],
-    description: "A simple string value",
+    category: ["Interactive"],
+    description: "Collapsible items of content",
     fields: [
         {
             name: "content",

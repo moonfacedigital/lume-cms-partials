@@ -1,3 +1,4 @@
+import button from "../button/index.js"
 export default {
     name: "buttonGroup",
     label: "Button group",
@@ -6,8 +7,10 @@ export default {
     description: "A group of two buttons",
     fields: [
         {
-            name: "content",
-            type: "text",
+            name: "buttons",
+            label: "Buttons",
+            type: "object-list",
+            fields: button.fields,
         },
     ],
 }

@@ -7,7 +7,7 @@ export default {
         {
             name: "src",
             label: "Source",
-            type: "text",
+            type: "file",
         },
         {
             name: "alt",

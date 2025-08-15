@@ -3,11 +3,11 @@ export default {
     label: "Button",
     type: "object",
     category: ["Buttons"],
-    description: "A group of two buttons",
+    description: "An element that runs an action when clicked",
     fields: [
         {
-            name: "variants",
-            label: "Variants",
+            name: "variant",
+            label: "Variant",
             type: "select",
             options: [
                 { label: "Primary", value: "primary" },
@@ -39,7 +39,10 @@ export default {
                 {
                     name: "data",
                     label: "Data",
-                    type: "text",
+                    type: "combobox",
+                    async init(field, { data }, doc) {
+                        field.options = await getPages(cms, "pages")
+                    },
                 },
             ],
         },
