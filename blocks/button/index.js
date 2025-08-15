@@ -41,7 +41,10 @@ export default {
                     label: "Data",
                     type: "combobox",
                     async init(field, { data }, doc) {
-                        field.options = await globalThis.getPages(cms, "pages")
+                        field.options = await globalThis.getPages(
+                            globalThis.cms,
+                            "pages"
+                        )
                     },
                 },
             ],
